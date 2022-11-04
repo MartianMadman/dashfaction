@@ -39,7 +39,7 @@ struct GameConfig
     CfgVar<bool> fast_anims = false;
     CfgVar<bool> disable_lod_models = true;
     CfgVar<bool> anisotropic_filtering = true;
-    CfgVar<bool> nearest_texture_filtering = false;
+    CfgVar<bool> nearest_texture_filtering = true;
     CfgVar<unsigned> msaa = 0;
     CfgVar<bool> high_scanner_res = true;
     CfgVar<bool> high_monitor_res = true;
@@ -56,7 +56,7 @@ struct GameConfig
 
     // Audio
     CfgVar<float> level_sound_volume = 1.0f;
-    CfgVar<bool> eax_sound = true;
+    CfgVar<bool> eax_sound = false;
 
     // Multiplayer
     static const char default_rf_tracker[];
@@ -68,24 +68,24 @@ struct GameConfig
     CfgVar<unsigned> force_port{0, [](auto val) { return std::min<unsigned>(val, std::numeric_limits<uint16_t>::max()); }};
 
     // Input
-    CfgVar<bool> direct_input = false;
-    CfgVar<bool> linear_pitch = false;
+    CfgVar<bool> direct_input = true;
+    CfgVar<bool> linear_pitch = true;
     CfgVar<bool> swap_assault_rifle_controls = false;
     CfgVar<bool> swap_grenade_controls = false;
     CfgVar<int> skip_cutscene_ctrl = -1;
 
     // Interface
-    CfgVar<bool> fps_counter = true;
+    CfgVar<bool> fps_counter = false;
     CfgVar<bool> big_hud = false;
     CfgVar<float> reticle_scale = 1.0f;
     CfgVar<int> language = -1;
-    CfgVar<bool> scoreboard_anim = false;
+    CfgVar<bool> scoreboard_anim = true;
 
     // Misc
     CfgVar<bool> fast_start = true;
     CfgVar<bool> allow_overwrite_game_files = false;
-    CfgVar<bool> keep_launcher_open = false;
-    CfgVar<bool> reduced_speed_in_background = false;
+    CfgVar<bool> keep_launcher_open = true;
+    CfgVar<bool> reduced_speed_in_background = true;
     CfgVar<bool> player_join_beep = false;
     CfgVar<bool> autosave = true;
 
