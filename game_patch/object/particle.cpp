@@ -52,15 +52,6 @@ CodeInjection particle_should_take_damage_injection{
     }
 };
 
-CodeInjection particle_move_all_update_world_pos_fix{
-    0x004964AE,
-    [](auto& regs) {
-        rf::ParticleEmitter* emitter = regs.esi;
-        rf::Vector3 dir;
-        emitter->get_pos_and_dir(&emitter->world_pos, &dir);
-    },
-};
-
 void particle_do_patch()
 {
     // Fix particle damage on dedicated servers, e.g., flame thrower.
@@ -80,7 +71,4 @@ void particle_do_patch()
 
     // Do not create not damaging particles on a dedicated server
     particle_create_hook.install();
-
-    // Fix cull radius calculation for particle emitters attached to objects
-    particle_move_all_update_world_pos_fix.install();
 }
