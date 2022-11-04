@@ -253,10 +253,12 @@ void object_do_patch()
     write_mem<u8>(0x005047AB, asm_opcodes::jmp_rel_short); // vmesh
 
     // Remove object type-specific limits
+    if (rf::is_dedicated_server) {
     AsmWriter(0x0048712A, 0x00487137).nop(); // corpse
     AsmWriter(0x00487173, 0x00487180).nop(); // debris
     AsmWriter(0x004871D9, 0x004871E9).nop(); // item
     AsmWriter(0x00487271, 0x0048727A).nop(); // weapon
+    }
 
     // Zero memory allocated from GPool dynamically
     GPool_allocate_new_hook.install();
