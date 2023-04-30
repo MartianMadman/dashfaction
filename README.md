@@ -91,14 +91,13 @@ Dash Faction also works on Linux when launched through Wine. The latest Ubuntu L
 
 Usage
 -----
-1. Unpack the Dash Faction files to any folder (there is no requirement to put it in the Red Faction folder).
+1. Unpack Dash Faction files to any folder (there is no requirement to put it in Red Faction folder).
 
-2. Run `DashFactionLauncher.exe`.
+2. Run DashFactionLauncher.exe.
 
-3. When running the launcher for the first time, select the "Options" button and adjust the settings to your preference. Make sure the
-   game executable path is valid.
+3. On first run select Options and check if everything is OK (especially make sure game executable path is valid).
 
-4. Close the options window and click the "Launch Game" button to start Dash Faction.
+4. Close settings and click "Launch Game" to start Dash Faction.
 
 Advanced usage
 --------------
