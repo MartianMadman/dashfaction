@@ -27,7 +27,7 @@ struct GameConfig
     };
 
     CfgVar<WndMode> wnd_mode = FULLSCREEN;
-    CfgVar<bool> vsync = true;
+    CfgVar<bool> vsync = false;
     CfgVar<unsigned> geometry_cache_size{32, [](auto val) { return std::clamp(val, 2u, 32u); }};
 
     static constexpr unsigned min_fps_limit = 10u;
