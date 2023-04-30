@@ -307,7 +307,7 @@ void ApplyGraphicsPatches()
     gr_setup_3d_hook.install();
 
     // Use d3d8to9 instead of d3d8
-    gr_d3d_init_load_library_injection.install();
+    // gr_d3d_init_load_library_injection.install();
 
     // Fix setting viewport window
     gr_d3d_set_viewport_wnd_hook.install();
